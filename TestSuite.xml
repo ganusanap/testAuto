@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Open Weather Map Tests" parallel="false">
+	<test name="Test Welcome Page" enabled="true">
+		<classes>
+			<class name="openweathermap.testcases.TestWelcomePage" />
+		</classes>
+	</test>
+	<test name="Test Weather Search - Invalid City" enabled="true">
+		<classes>
+			<class name="openweathermap.testcases.TestWeatherSearch">
+				<methods>
+					<include name="testInvalidCityResult" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test Weather Search - Valid City" enabled="true">
+		<classes>
+			<class name="openweathermap.testcases.TestWeatherSearch">
+				<methods>
+					<include name="testValidCityResult" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
